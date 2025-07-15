@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #880e4f; /* rojo vino */
+}
+
+#malla {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(200px, 1fr));
+  gap: 10px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.ramo {
+  background-color: #f0e6ec;
+  border: 2px solid #880e4f;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+  text-align: center;
+}
+
+.ramo.bloqueado {
+  background-color: #ccc;
+  color: #888;
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+.ramo.aprobado {
+  background-color: #880e4f;
+  color: white;
+  border-color: #660030;
+}
