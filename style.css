@@ -1,44 +1,50 @@
 body {
-  font-family: sans-serif;
-  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #330000;
   padding: 20px;
-  color: #333;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #880e4f; /* rojo vino */
+  color: #660000;
 }
 
 #malla {
   display: grid;
-  grid-template-columns: repeat(11, minmax(200px, 1fr));
+  grid-template-columns: repeat(11, 1fr);
   gap: 10px;
-  max-width: 100%;
-  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.semestre {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .ramo {
-  background-color: #f0e6ec;
-  border: 2px solid #880e4f;
-  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #990000;
   border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  position: relative;
+  padding: 10px;
   text-align: center;
-}
-
-.ramo.bloqueado {
-  background-color: #ccc;
-  color: #888;
-  border-style: dashed;
-  cursor: not-allowed;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
 }
 
 .ramo.aprobado {
-  background-color: #880e4f;
+  background-color: #660000;
   color: white;
-  border-color: #660030;
+}
+
+.ramo.bloqueado {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.ramo:hover {
+  background-color: #cc0000;
+  color: white;
 }
